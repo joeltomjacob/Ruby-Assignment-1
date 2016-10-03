@@ -1,0 +1,9 @@
+Student Name: Joel Jacob
+Student Number: 13319401
+Assignment 1: In the Product Class, we initialise the following variables:
+	      Name of Product, Net Price of product, and the count through the list of products.
+	      In the Shop Class, we initiliaze the methods to add products, print the stocklist of products, and print 
+	      the combined net value of the products. 
+	      The main class reads in a text file named 'shop.txt', which contains the stocklist. 
+	      The product class provides the variables needed from the text file, and shop contains the methods needed
+	      to give the net and gross value of the products
