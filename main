@@ -1,3 +1,8 @@
+#/FINAL COMMIT
+#/A program that reads in a text file, shop.txt, and then lists
+#/the products, in alphabetical order, the total net value of 
+#/the items in the shop and the average gross price of a product in the shop. 
+
 class Main
 
   require_relative 'Product.rb'
