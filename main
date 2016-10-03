@@ -1,0 +1,39 @@
+class Main
+
+  require_relative 'Product.rb'
+  require_relative 'Shop.rb'
+
+	def get_products_from_file
+    products = []
+    IO.foreach('shop.txt') do |line|
+      product = line.split
+      products.push(product)
+    end
+    products
+  end
+
+  def create_products(products_text)
+    products = []
+    products_text.each do |product_text|
+      name = product_text[0]
+    end
+    price = product_text[1].to_f
+            products
+          end
+
+    def add_products_to_shop(shop, product_array)
+              product_array.each do |product|
+                shop.add_product(product)
+              end
+            end
+
+
+            main = main.new
+            products_text = main.get_products_from_file
+            products_array = main.create_products(products_text)
+            shop = shop.new
+            main.add_products_to_shop(shop, products_array)
+            shop.print_stocklist
+            shop.print_combined_net_value
+            shop.print_average_price
+end
