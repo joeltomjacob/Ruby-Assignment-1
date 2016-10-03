@@ -1,0 +1,31 @@
+class Shop
+
+  require_relative 'Product.rb'
+
+  def initialize()
+    @products = []
+  end
+
+  def add_product(product)
+    @products.push(product)
+  end
+
+  def print_stocklist
+    @products.sort_by!(&:name)
+    @products.sort_by! { |product| product.name.downcase }
+    @products.each { |product| puts "#{product.name} €#{'%.02f' %product.gross_price}" }
+  end
+
+  def print_combined_net_value
+    	combined_net_value= 0
+    @products.each do |product|
+      combined_net_value += product.net_price * product.count
+    end
+    puts "The total value in shop is: €#{'%.02f' %combined_net_value}"
+  end
+
+  def print_average_price
+      combined_gross_value = 0
+    @products.each { |product| combined_gross_value += product.gross_price }
+  end
+end
