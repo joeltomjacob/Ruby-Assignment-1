@@ -1,0 +1,15 @@
+class Product
+  def initialise(name, net_price, count)
+    @name = name
+    @net_price = net_price
+    @count = count
+
+    VAT = 0.2
+
+    attr_accessor :name, :net_price, :count,
+  end
+
+  def gross_price
+    @net_price *(1+VAT)
+  end
+end
